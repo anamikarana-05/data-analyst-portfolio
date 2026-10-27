@@ -1,0 +1,246 @@
+/*basic reset*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+/*overall webpage*/
+body{
+    font-family:Arial, sans-serif;
+    background-color:#0f172a;
+    color:#f8fafc;
+    line-height:1.6;
+}
+/*navigation bar*/
+header{
+    padding:20px 8%;
+    border-bottom:1px solid #334155;
+}
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.logo{
+    color:#f8fafc;
+    font-size:24px;
+    font-weight:bold;
+    text-decoration:none;
+}
+.logo span{
+    color:#38bdf8;
+}
+nav ul{
+    display:flex;
+    gap:24px;
+    list-style:none;
+}
+nav a{
+    color:#cd5e1;
+    text-decoration:none;
+
+}
+nav a:hover{
+    color:#38bdf8;
+}
+/*main sections*/
+section{
+    padding:70px 8%;
+    scroll-margin-top:20px;
+}
+.hero{
+    min-height:65vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+}
+.intro{
+    color:#38bdf8;
+    letter-spacing:3px;
+    font-size:14px;
+
+}
+h1{
+    font-size:clamp(38px, 6vw, 64px);
+    margin:10px 0;
+
+}
+h2{
+    margin-bottom:16px;
+}
+.hero h2{
+    color:#38bdf8;
+}
+section p{
+    max-width:650px;
+    color:#cbd5e1;
+}
+/*project button*/
+.btn{
+    display:inline-block;
+    margin-top:24px;
+    padding:12px 22px;
+    background-color:#38bdf8;
+    color:#0f172a;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+}
+.btn:hover{
+    background-color:#7dd3fc;
+}
+/*footer*/
+footer{
+    padding:24px 8%;
+    text-allign:center;
+    border-top:1px solid #334155;
+    color:#94a3b8;
+}
+/*projects section*/
+.projects-section{
+    background-color:#111c32;
+}
+.projects-section h2{
+    margin-bottom:12px;
+}
+.project-container{
+    display:grid;
+    grid-template-coloumns:repeat(3,minmax(0,1fr));
+    gap:22px;
+    margin-top:30px;
+}
+.project-card{
+    background-color:#1e293b;
+    border:1px solid #334155;
+    border-radius:12px;
+    padding:24px;
+    transition:transform 0.3s ease;
+}
+.project-card:hover{
+    transform:translateY(-5px);
+    border-color:#38bdf8;
+}
+.project-card h3{
+    margin-bottom:12px;
+    color:#f8fafc;
+}
+.project-card p {
+    color:#cbd5e1;
+    margin-bottom:16px;
+}
+.project-card span{
+    display:inline-block;
+    background-color:#0f172a;
+    color:#38bdf8;
+    padding:5px 10px;
+    border- radius:5px;
+    font-size:13px;
+}
+/*skills section*/
+.skills-section{
+    background-color:#0f172a;
+
+}
+.skills-section h2{
+    margin-bottom:12px;
+}
+.skills-container{
+    display:grid;
+    grid-template-coloumns:repeat(4, minmax(0, 1fr));
+    gap:16px;
+    margin-top:28px;
+}
+.skill-card {
+    padding:20px;
+    background-color:#1e293b;
+    border:1px solid #334155;
+    border-radius:10px;
+
+}
+.skill-card h3{
+    color:#38bdf8;
+    margin-bottom:8px;
+}
+.skill-card p{
+    color:#cbd5e1;
+    font-size:14px;
+}
+/*About section*/
+.about-section{
+    background-color: #111c32;
+
+}
+.about-section p{
+    max-width:750px;
+}
+/*contact section*/
+.contact-section{
+    text-align:center;
+}
+.contact-section>p{
+    margin:0 auto;
+}
+.contact-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-top:25px;
+}
+.contact-links a{
+    color:#38bdf8;
+    border:1px solid #38bdf8;
+    padding:10px 20px;
+    border-radius:6px;
+    text-decoration:none;
+    transition:background-color 0.3s ease;
+}
+.contact-links a:hover{
+    background-color:#1e293b;
+}
+@media(max-width:900px){
+    .skills-container{
+        grid-template-coloumns:repeat(2, minmax(0, 1fr));
+    }
+}
+@media(max-width:600px){
+    .skills-container{
+        grid-template-columns:1fr;
+    }
+}
+/*responsive layout*/
+@media(max-width:900px){
+    .project-container{
+        grid-template-coloumns:repeat(2,minmax(0, 1fr));
+
+    }
+}
+@media (max-width:600px){
+    .project-container{
+        grid-template-coloumns:1 fr;
+    }
+}
+/*mobile layout*/
+@media (max-width:600px){
+    header{
+        padding:18px 5%;
+    
+    }
+    nav{
+        flex-direction:coloumn;
+        gap: 16px;
+    }
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:14px;
+    }
+    section{
+        padding:50px 5%;
+    }
+}
+html{
+    scroll-behavior: smooth;
+}
+
